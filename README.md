@@ -1,8 +1,10 @@
 # Matrimony_Frontend
+
 Frontend Technologies:
-    Angular
-    HTML
-    CSS
-    Bootstrap
-    Typescript
-    Javascript
+
+    - Angular
+    - HTML
+    - CSS
+    - Bootstrap
+    - Typescript
+    - Javascript
