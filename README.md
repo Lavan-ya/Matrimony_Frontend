@@ -4,7 +4,7 @@ Frontend Technologies:
 
     - Angular
     - HTML
-    - CSS
+    - CSS Style
     - Bootstrap
     - Typescript
     - Javascript
