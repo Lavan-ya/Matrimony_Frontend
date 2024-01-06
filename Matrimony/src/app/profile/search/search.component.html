@@ -1,26 +1,26 @@
 <p>search works!</p>
 
-<select #dropdown [(ngModel)]="searchPayload.gender">
-    <option>Gender</option>
+<label for="genderSelect">Gender</label>
+<select id="genderSelect" [(ngModel)]="searchPayload.gender">
     <option value="Male">Male</option>
     <option value="Female">Female</option>
 </select>
 
-<select [(ngModel)]="searchPayload.ageFrom">
-    <option>Age From</option>
+<label for="ageFromSelect">Age From</label>
+<select id="ageFromSelect" [(ngModel)]="searchPayload.ageFrom">
     <option *ngFor="let age of ageFrom" [value]="age">{{age}}</option>
 </select>
 
-<select [(ngModel)]="searchPayload.ageTo">
-    <option>Age To</option>
+<label for="ageToSelect">Age To</label>
+<select id="ageToSelect" [(ngModel)]="searchPayload.ageTo">
     <option *ngFor="let age of ageTo" [value]="age">{{age}}</option>
 </select>
 
-<select [(ngModel)]="searchPayload.religion">
-    <option value="">Religion</option>
+<label for="religionSelect">Religion</label>
+<select id="religionSelect" [(ngModel)]="searchPayload.religion">
     <option value="Hindu">Hindu</option>
     <option value="Christian">Christian</option>
     <option value="Muslim">Muslim</option>
 </select>
 
-<button class="btn" type="button" (click)="submitSearch()" >Search</button>
+<button class="btn-primary" type="button" (click)="submitSearch()" >Search</button>

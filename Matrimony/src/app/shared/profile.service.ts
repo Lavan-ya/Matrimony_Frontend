@@ -12,7 +12,7 @@ export class ProfileService {
     
    }
 
-   baseurl = "http://localhost:8080/api/candidates/";
+   baseurl = "http://localhost:8080/api/candidates";
 
 searching(search_payload : SearchPayload){
     let params = new HttpParams();

@@ -11,9 +11,14 @@ export class SearchComponent implements OnInit{
 ageFrom : number[] = [];
 ageTo : number[] =[];
 
-searchPayload !: SearchPayload;
+searchPayload : SearchPayload ;
 constructor(private profileService : ProfileService){
-
+this.searchPayload={
+  'gender':'',
+  'ageFrom':0,
+  'ageTo':0,
+  'religion':''
+}
 }
 
 ngOnInit(){
@@ -32,6 +37,9 @@ ageCalculator(){
 submitSearch(){
   alert("submitted");
   console.log("Submitted");
-this.profileService.searching(this.searchPayload);
+this.profileService.searching(this.searchPayload).subscribe(data=>{
+  console.log(data);
+  alert("received reply from server");
+});
 }
 }
