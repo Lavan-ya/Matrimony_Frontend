@@ -1,0 +1,15 @@
+.decor{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.profile-image {
+    width: 100px;  
+    height: 100px; 
+    object-fit: cover; 
+    margin-right: 10em;
+  }
+
+  .prof{
+    margin-top: 2em;
+  }

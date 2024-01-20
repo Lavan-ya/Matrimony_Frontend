@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ProfileRegister } from '../profile/register-profile/ProfileRegister_payload';
 import { SearchPayload } from '../profile/search/search_payload';
 
 @Injectable({
@@ -23,4 +24,17 @@ searching(search_payload : SearchPayload){
 
   return this.httpClient.get<any>(`${this.baseurl}/searchProfiles`,{params:params});
    }
+
+searchAll(){
+  return this.httpClient.get<any>(`${this.baseurl}/searchAllProfiles`);
+}
+
+searchIndividualProfile(id:string){
+  return this.httpClient.get<any>(`${this.baseurl}/searchIndividualProfile/${id}`);
+}
+
+insertProfile(profileRegister:ProfileRegister){
+  
+}
+
 }

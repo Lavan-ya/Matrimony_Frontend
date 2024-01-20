@@ -1,26 +1,37 @@
-<p>search works!</p>
 
-<label for="genderSelect">Gender</label>
+<button class="btn-toggle" (click)="toggleDropdown()">Profile Search</button>
+
+<div *ngIf="isDropdownVisible" class="dropdown">
+<label for="genderSelect">Gender : </label>
 <select id="genderSelect" [(ngModel)]="searchPayload.gender">
+    <option value=""></option>
     <option value="Male">Male</option>
     <option value="Female">Female</option>
 </select>
 
-<label for="ageFromSelect">Age From</label>
+<label for="ageFromSelect">Age From : </label>
 <select id="ageFromSelect" [(ngModel)]="searchPayload.ageFrom">
-    <option *ngFor="let age of ageFrom" [value]="age">{{age}}</option>
+    <option value=""></option>
+    <option *ngFor="let age of ageFrom" [value]=20>{{age}}</option>
 </select>
 
-<label for="ageToSelect">Age To</label>
+<label for="ageToSelect">Age To : </label>
 <select id="ageToSelect" [(ngModel)]="searchPayload.ageTo">
+    <option value=""></option>
     <option *ngFor="let age of ageTo" [value]="age">{{age}}</option>
 </select>
 
-<label for="religionSelect">Religion</label>
+<label for="religionSelect">Religion : </label>
 <select id="religionSelect" [(ngModel)]="searchPayload.religion">
+    <option value=""></option>
     <option value="Hindu">Hindu</option>
     <option value="Christian">Christian</option>
     <option value="Muslim">Muslim</option>
 </select>
 
 <button class="btn-primary" type="button" (click)="submitSearch()" >Search</button>
+</div>
+
+<div *ngIf="showSearchResults">
+<app-profiles-list  [profileListPayload]="searchResults"></app-profiles-list>
+</div>

@@ -1,0 +1,20 @@
+<div class="container" >
+    <div *ngIf="Individualprofile_payload" class="cont flex">
+       
+        <h2 style="font-size: 24px; color: #333; margin-bottom: 20px;">{{ Individualprofile_payload.name }} Profile Details</h2>
+
+        <img *ngIf="Individualprofile_payload.image" [src]="'data:image/jpeg;base64,' + Individualprofile_payload.image" class="profile-image">
+        
+        <div class="box">
+            <p style="font-size: 16px; color: #666; line-height: 1.6;"><strong>ID:</strong> {{ Individualprofile_payload.id }}</p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;"><strong>Name:</strong> {{ Individualprofile_payload.name }}</p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;"><strong>Age:</strong> {{ Individualprofile_payload.age }}</p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;"><strong>Occupation:</strong> {{ Individualprofile_payload.occupation }}</p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;"><strong>Current Residence:</strong> {{ Individualprofile_payload.currentResidence }}</p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;"><strong>Native Place:</strong> {{ Individualprofile_payload.nativePlace }}</p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;"><strong>Gender:</strong> {{ Individualprofile_payload.gender }}</p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;"><strong>Religion:</strong> {{ Individualprofile_payload.religion }}</p>
+            <p class="caste" style="font-size: 16px; color: #666; line-height: 1.6;"><strong>Caste:</strong> {{ Individualprofile_payload.caste }}</p>
+        </div>
+    </div>
+</div>
